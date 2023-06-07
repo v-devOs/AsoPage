@@ -1,4 +1,6 @@
-import styles from './Navbar.module.css'
+import { AppBar, Box, Toolbar, Typography, Link, Button, IconButton, SxProps, Theme } from "@mui/material"
+
+import MenuOutlined from '@mui/icons-material/MenuOutlined'
 
 const navbarTags = [
   'Propuestas',
@@ -6,21 +8,45 @@ const navbarTags = [
   'Eventos'
 ]
 
+const stylesResponsive: SxProps<Theme> = {
+  display: { xs: 'none', sm: 'flex'}
+}
+
 export const Navbar = () => {
   return (
-    <nav className={styles.nav} >
-      <h2 className="title-nav">Asociacion SC</h2>
-      
-      <ul className={styles['nav-links']}>
-        {
-          navbarTags.map( tag => (
-            <li key={tag} className={styles['nav-link']}>
-              <a href={`#tag`} className={styles['nav-link-item']}>{ tag }</a>
-            </li>
-          ))
-        }
-      </ul>
+    <AppBar >
+      <Toolbar
+      sx={{ margin: { xs: '30px 15px', sm: '50px 80px'}}}>
+        
+        <Link href='#main'>
+          <Typography variant="h6">Aso Sc</Typography>
+        </Link>
 
-    </nav>
+        <Box flex={1}></Box>
+
+        <Box sx={stylesResponsive}>
+          {
+            navbarTags.map( tag => (
+              <Link 
+                key={tag} 
+                href={`#${tag}`} 
+                component='span'
+                color='primary' 
+                sx={{ m: '0px 20px'}}>
+                <Button>
+                  { tag }
+                </Button>
+              </Link>
+            ))
+          }
+        </Box>
+
+        <IconButton sx={{ display: { xs: 'block', sm: 'none'}}}>
+          <MenuOutlined/>
+        </IconButton>
+
+
+      </Toolbar>
+    </AppBar>
   )
 }

@@ -1,26 +1,35 @@
-import { Box, Grid } from "@mui/material"
 import { FC } from "react"
+import Head from "next/head"
+
+import { Box, Grid } from "@mui/material"
 import { Navbar } from "../ui"
 
 
 interface Props{
   children: React.ReactNode
+  title: string
 }
 
-export const LandingLayout: FC<Props> = ({ children }) => {
+export const LandingLayout: FC<Props> = ({ children, title }) => {
   return (
-    <Box>
-
-      <Navbar/>
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
       
-      <Box sx={{zIndex: -1}}>
-        <img style={{ position: 'absolute', height: '100vh', left: '-150px'}} src="https://keynote.tailwindui.com/_next/static/media/background.6c3571e0.jpg" alt="" />
-      </Box>
+      <nav>
+        <Navbar/>
+      </nav>
 
-      <Grid item>
+      <main style={{
+        margin: '80px auto',
+        maxWidth: '1440px',
+        padding: '0px 30px'
+
+      }}>
         { children }
-      </Grid>
+      </main>
 
-    </Box>
+    </>
   )
 }
