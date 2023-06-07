@@ -2,7 +2,7 @@ import { FC } from "react"
 import Head from "next/head"
 
 import { Box, Grid } from "@mui/material"
-import { Navbar } from "../ui"
+import { Navbar, SideMenu } from "../ui"
 
 
 interface Props{
@@ -20,6 +20,8 @@ export const LandingLayout: FC<Props> = ({ children, title }) => {
       <nav>
         <Navbar/>
       </nav>
+
+      <SideMenu/>
 
       <main style={{
         margin: '80px auto',

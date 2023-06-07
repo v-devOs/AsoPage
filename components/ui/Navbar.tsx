@@ -1,12 +1,9 @@
 import { AppBar, Box, Toolbar, Typography, Link, Button, IconButton, SxProps, Theme } from "@mui/material"
 
 import MenuOutlined from '@mui/icons-material/MenuOutlined'
+import { navbarTags } from "./constants"
 
-const navbarTags = [
-  'Propuestas',
-  'Integrantes',
-  'Eventos'
-]
+
 
 const stylesResponsive: SxProps<Theme> = {
   display: { xs: 'none', sm: 'flex'}
