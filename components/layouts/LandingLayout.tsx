@@ -17,20 +17,22 @@ export const LandingLayout: FC<Props> = ({ children, title }) => {
         <title>{title}</title>
       </Head>
       
-      <nav>
-        <Navbar/>
-      </nav>
+      <Grid sx={{ height: '560px'}}  className="container-main">
+        <nav>
+          <Navbar/>
 
-      <SideMenu/>
+        </nav>
 
-      <main style={{
-        margin: '80px auto',
-        maxWidth: '1440px',
-        padding: '0px 30px'
+        <SideMenu/>
 
-      }}>
-        { children }
-      </main>
+        <main style={{
+          padding: '90px 150px'
+        }}>
+          { children }
+        </main>
+
+      </Grid>
+      
 
     </>
   )

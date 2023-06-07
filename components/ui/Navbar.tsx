@@ -13,10 +13,10 @@ export const Navbar = () => {
   return (
     <AppBar >
       <Toolbar
-      sx={{ margin: { xs: '30px 15px', sm: '50px 80px'}}}>
+      sx={{ margin: { xs: '30px 15px', sm: '50px 150px'}}}>
         
         <Link href='#main'>
-          <Typography variant="h6">Aso Sc</Typography>
+          <Typography variant="h5" color='primary' >Asociacion Sc</Typography>
         </Link>
 
         <Box flex={1}></Box>
@@ -29,10 +29,8 @@ export const Navbar = () => {
                 href={`#${tag}`} 
                 component='span'
                 color='primary' 
-                sx={{ m: '0px 20px'}}>
-                <Button>
-                  { tag }
-                </Button>
+                sx={{ m: '0px 20px', cursor: 'pointer'}}>
+                {tag}
               </Link>
             ))
           }

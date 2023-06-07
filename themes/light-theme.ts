@@ -6,7 +6,7 @@ export const lightTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#2A4FBF'
+      main: '#fff'
     },
     secondary: {
       main: '#3A64D8'
@@ -39,7 +39,7 @@ export const lightTheme = createTheme({
     MuiTypography: {
       styleOverrides: {
         h1: {
-          fontSize: 30,
+          fontSize: 35,
           fontWeight: 600
         },
         h2: {
@@ -55,7 +55,7 @@ export const lightTheme = createTheme({
 
     MuiButton: {
       defaultProps: {
-        variant: 'contained',
+        variant: 'outlined',
         size: 'medium',
         disableElevation: true,
         color: 'primary',
@@ -64,12 +64,12 @@ export const lightTheme = createTheme({
         root: {
           textTransform: 'none',
           boxShadow: 'none',
-          padding: '20px',
-          borderRadius: 10,
+          padding: '10px',
+          // borderRadius: 10,
+          border: 'none',
           ":hover": {
-            backgroundColor: 'rgba(0,0,0,0.05)',
-            color: '#252525' ,
-            transition: 'all 0.3s ease-in-out',
+            // backgroundColor: 'rgba(0,0,0,0.05)',
+            // transition: 'all 0.3s ease-in-out',
           
           }
         }
