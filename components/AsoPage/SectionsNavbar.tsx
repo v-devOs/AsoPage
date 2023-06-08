@@ -1,6 +1,5 @@
 import { Grid, SxProps, Theme } from '@mui/material';
-import { Proposals } from './Proposals';
-import { Projects } from './Projects';
+import { Proposals, Projects, Members } from './';
 
 
 const stylesProperties: SxProps<Theme>   = {
@@ -26,6 +25,10 @@ export const SectionsNavbar = () => {
 
       <Grid item xs={12}>
         <Projects/>
+      </Grid>
+
+      <Grid item xs={12}>
+        <Members/>
       </Grid>
 
 
