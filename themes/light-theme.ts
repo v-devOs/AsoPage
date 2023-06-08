@@ -25,7 +25,7 @@ export const lightTheme = createTheme({
     MuiAppBar: {
       defaultProps: {
         elevation: 0,
-        position: 'sticky',
+        position: 'fixed',
       },
       styleOverrides: {
         root: {
@@ -43,7 +43,7 @@ export const lightTheme = createTheme({
           fontWeight: 700
         },
         h2: {
-          fontSize: 25,
+          fontSize: 30,
           fontWeight: 400
         },
         subtitle1: {
