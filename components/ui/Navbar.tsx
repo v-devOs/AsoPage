@@ -2,6 +2,7 @@ import { AppBar, Box, Toolbar, Typography, Link, Button, IconButton, SxProps, Th
 
 import MenuOutlined from '@mui/icons-material/MenuOutlined'
 import { navbarTags } from "./constants"
+import { useRouter } from "next/router"
 
 
 
@@ -10,6 +11,9 @@ const stylesResponsive: SxProps<Theme> = {
 }
 
 export const Navbar = () => {
+
+  const router = useRouter()
+
   return (
     <AppBar >
       <Toolbar
@@ -26,7 +30,7 @@ export const Navbar = () => {
             navbarTags.map( tag => (
               <Link 
                 key={tag} 
-                href={`#${tag}`} 
+                onClick={ () => router.push(`/#${tag}`)}
                 component='span'
                 color='primary' 
                 sx={{ m: '0px 20px', cursor: 'pointer'}}>

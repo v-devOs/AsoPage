@@ -40,14 +40,14 @@ export const lightTheme = createTheme({
       styleOverrides: {
         h1: {
           fontSize: 35,
-          fontWeight: 600
+          fontWeight: 700
         },
         h2: {
-          fontSize: 20,
+          fontSize: 25,
           fontWeight: 400
         },
         subtitle1: {
-          fontSize: 18,
+          fontSize: 10,
           fontWeight: 600
         }
       }
