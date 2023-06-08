@@ -5,18 +5,18 @@ import { examplesProposal } from './basicData';
 export const Projects = () => {
   return (
 
-    <div id="Projectos" className="container-projects"  style={{ paddingBottom: '50px'}}>
+    <div id="Proyectos" className="container-projects"  style={{ paddingBottom: '50px'}}>
 
       <Grid container >
 
-        <Grid item xs={12} textAlign='center' mt={5}>
+        <Grid item xs={12} textAlign='center' mt={8} mb={8}>
           <Typography variant="h2" component='h2' color='primary'>Proyectos de la Asociacion</Typography>
           
         </Grid>
 
           {
              examplesProposal.map( ({ id, img, desc, title}) => (
-              <Grid item xs={12} sm={6} lg={4} key={id} mt={3} display='flex' justifyContent='center'>
+              <Grid item xs={12} sm={6} lg={3} key={id} mt={3} display='flex' justifyContent='center'>
                 <Card sx={{ width: 300 , boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'}}  >
 
                   <CardActionArea>

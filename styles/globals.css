@@ -5,6 +5,7 @@ body{
 
 .container-main{
   background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)), url('/images/wallpaper2.jpg');
+  background-size: auto;
 }
 
 .container-projects{

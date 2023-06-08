@@ -17,7 +17,7 @@ export const Navbar = () => {
   return (
     <AppBar >
       <Toolbar
-      sx={{ margin: { xs: '30px 15px', sm: '50px 150px'}}}>
+      sx={{ margin: { xs: '30px 15px', md: '50px 150px'}}}>
         
         <Link href='#main'>
           <Typography variant="h5" color='primary' >Asociacion Sc</Typography>
@@ -41,7 +41,7 @@ export const Navbar = () => {
         </Box>
 
         <IconButton sx={{ display: { xs: 'block', sm: 'none'}}}>
-          <MenuOutlined/>
+          <MenuOutlined color="primary"/>
         </IconButton>
 
 
