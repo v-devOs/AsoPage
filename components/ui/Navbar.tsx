@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 
 import { UIContext } from "@/context"
 
@@ -6,7 +6,7 @@ import { AppBar, Box, Toolbar, Typography, Link, Button, IconButton, SxProps, Th
 
 import MenuOutlined from '@mui/icons-material/MenuOutlined'
 import { navbarTags } from "./constants"
-import { useRouter } from "next/router"
+import  { useRouter } from "next/router"
 
 
 
@@ -19,12 +19,25 @@ export const Navbar = () => {
   const { onToggleSideMenu } = useContext( UIContext )
 
   const router = useRouter()
+  
+  const [ scrollInY, setScrollInY ] = useState<number>();
+
+  useEffect(() => {
+    
+    window.addEventListener('scroll', () => (
+      setScrollInY( window.scrollY )
+    ))
+
+    return () => {
+      window.removeEventListener('scroll', () => (setScrollInY(window.scrollY)))
+    }
+  }, [])
+
+ 
 
   return (
-    <AppBar >
-      <Toolbar
-      sx={{ margin: { xs: '30px 15px', md: '50px 150px'}}}>
-        
+    <AppBar sx={{padding: {sm: "10px", md: "10px 30px", lg: "10px 150px"},background: `${ scrollInY! >= 400 ? 'rgba(37,37,37, 0.8)' : 'none'}` }}>
+      <Toolbar>
         <Link href='#main'>
           <Typography variant="h5" color='primary' >Asociacion Sc</Typography>
         </Link>

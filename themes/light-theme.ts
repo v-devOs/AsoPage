@@ -30,12 +30,11 @@ export const lightTheme = createTheme({
       styleOverrides: {
         root: {
           background: 'none',
-          height: 60,
+          height: 70,
 
         },
       }
     },
-
     MuiTypography: {
       styleOverrides: {
         h1: {

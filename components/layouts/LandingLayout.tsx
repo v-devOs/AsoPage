@@ -28,7 +28,6 @@ export const LandingLayout: FC<Props> = ({ children, title }) => {
       <Grid sx={stylesProperties}  className="container-main fadeIn">
         <nav>
           <Navbar/>
-
         </nav>
 
         <SideMenu/>

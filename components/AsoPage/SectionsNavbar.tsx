@@ -34,7 +34,7 @@ export const SectionsNavbar = () => {
       </Grid>
 
       <Grid item xs={12}>
-        <Events/>
+        {/* <Events/> */}
       </Grid>
 
 
