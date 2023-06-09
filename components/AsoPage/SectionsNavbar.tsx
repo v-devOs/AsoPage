@@ -3,13 +3,15 @@ import { Proposals, Projects, Members, Events } from './';
 
 
 const stylesProperties: SxProps<Theme>   = {
-  position: 'absolute',
+  position: "relative",
+  top: '150px',
   width: '95%',
-  top: '450px',
+  // top: '450px',
   backgroundColor: '#fff',
   borderRadius: '10px',
-  height: 'maxContent',
+  // height: 'maxContent',
   margin: '0 auto 100px auto',
+  padding: '10px 0 ',
   boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
 }
 

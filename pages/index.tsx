@@ -1,6 +1,7 @@
 import { Grid, Typography } from '@mui/material'
 import { SectionsNavbar } from '@/components/AsoPage'
 import { LandingLayout } from '@/components/layouts'
+import { Footer } from '@/components/ui'
 
 const HomePage = () => {
 
@@ -10,7 +11,8 @@ const HomePage = () => {
           <Typography variant='h1' color='primary' component='h1' sx={{ width: 'maxContent'}} mt={15}>Nombre Aso</Typography>
 
           <SectionsNavbar/>
-        </Grid>        
+        </Grid>
+
     </LandingLayout>
   )
 }

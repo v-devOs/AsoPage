@@ -17,9 +17,9 @@ body{
   transition: all 0.5s;
 }
 
-.container-events{
+/* .container-events{
   background-color: rgba(37, 37, 37, 0.9) ;
-}
+} */
 
 @keyframes fadeIn {
   0% {opacity: 0;}

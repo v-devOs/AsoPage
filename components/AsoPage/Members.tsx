@@ -52,6 +52,7 @@ export const Members = () => {
           </Grid>
         ))
       }
+
     </SectionPageLayout>
   )
 }
