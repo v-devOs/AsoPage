@@ -3,15 +3,17 @@ import { examplesProposal } from './basicData';
 import { SectionPageLayout } from '../layouts';
 
 
+
+
 export const Projects = () => {
   return (
     <SectionPageLayout title='Proyectos de la asociacion' id='Proyectos' useColorPrimary sectionClass='container-projects'>
       {
        examplesProposal.map( ({ id, img, desc, title}) => (
-          <Grid item xs={12} sm={6} lg={3} key={id} mt={3} display='flex' justifyContent='center'>
+          <Grid item xs={12} sm={6} lg={4} key={id} mt={3} display='flex' justifyContent='center'>
             <Card sx={{ width: 300 , boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'}}  >
 
-              <CardActionArea>
+              <CardActionArea >
                 
                 <CardMedia
                   component='img'

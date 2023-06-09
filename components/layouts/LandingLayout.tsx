@@ -17,7 +17,7 @@ export const LandingLayout: FC<Props> = ({ children, title }) => {
         <title>{title}</title>
       </Head>
       
-      <Grid sx={{ height: '560px'}}  className="container-main">
+      <Grid sx={{ height: '560px'}}  className="container-main fadeIn">
         <nav>
           <Navbar/>
 
