@@ -36,7 +36,10 @@ export const Navbar = () => {
  
 
   return (
-    <AppBar sx={{padding: {sm: "10px", md: "10px 30px", lg: "10px 150px"},background: `${ scrollInY! >= 400 ? 'rgba(37,37,37, 0.8)' : 'none'}` }}>
+    <AppBar 
+      className={`${ scrollInY! >= 380 && 'fadeIn'}`}
+      sx={{padding: {sm: "10px", md: "10px 30px", lg: "10px 150px"},
+          background: `${ scrollInY! >= 380 ? 'rgba(37,37,37, 0.8)' : 'none'}`}}>
       <Toolbar>
         <Link href='#main'>
           <Typography variant="h5" color='primary' >Asociacion Sc</Typography>

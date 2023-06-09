@@ -16,6 +16,7 @@ const stylesProperties: SxProps<Theme>   = {
   height: '560px',
   // margin: '0 auto 100px auto',
   // boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+  backgroundImage:  'linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)), url("/images/wallpaper2-mobile.jpg")'
 }
 
 export const LandingLayout: FC<Props> = ({ children, title }) => {

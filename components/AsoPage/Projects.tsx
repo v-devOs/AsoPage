@@ -1,5 +1,5 @@
 import { Grid, Typography, List, Card, CardMedia, CardContent, CardActionArea } from '@mui/material';
-import { examplesProposal } from './basicData';
+import { examplesProposal, projectsAso } from './basicData';
 import { SectionPageLayout } from '../layouts';
 
 
@@ -7,10 +7,15 @@ import { SectionPageLayout } from '../layouts';
 
 export const Projects = () => {
   return (
-    <SectionPageLayout title='Proyectos de la asociacion' id='Proyectos' useColorPrimary sectionClass='container-projects'>
+    <SectionPageLayout title='Proyectos' id='Proyectos' useColorPrimary sectionClass='container-projects'>
       {
-       examplesProposal.map( ({ id, img, desc, title}) => (
-          <Grid item xs={12} sm={6} lg={4} key={id} mt={3} display='flex' justifyContent='center'>
+       projectsAso.map( ({ _id, img, notes, nameProject}) => (
+          <Grid item xs={12} sm={6} lg={4} 
+                key={_id} mt={3} 
+                display='flex' 
+                justifyContent='center'
+                className='container-project'
+          >
             <Card sx={{ width: 300 , boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'}}  >
 
               <CardActionArea >
@@ -24,7 +29,12 @@ export const Projects = () => {
 
               </CardActionArea>
               <CardContent>
-                <Typography gutterBottom variant='h6' component='div'>{title}</Typography>
+                <Typography gutterBottom variant='h6' component='div'>{nameProject}</Typography>
+                {
+                  notes && (
+                    <Typography variant='body2'>{ notes }</Typography>
+                  )
+                }
               </CardContent>
             </Card>
           </Grid>

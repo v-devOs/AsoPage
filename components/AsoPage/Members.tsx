@@ -5,14 +5,15 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import WebIcon from '@mui/icons-material/WebOutlined'
 
 import { SectionPageLayout } from "../layouts"
-import { exampleMembers } from "./basicData"
+import { membersAso } from "./basicData"
+import { link } from "fs"
 
 export const Members = () => {
   return (
-    <SectionPageLayout title={"Miembros"} id={"Integrantes"} sectionClass={""}>
+    <SectionPageLayout title={"Integrantes"} id={"Integrantes"} sectionClass={""}>
       {
-        exampleMembers.map( ({id, img, name, cargo}) => (
-          <Grid item xs={12} md={6} lg={4}  key={id} mb={3} className="container-member" onFocus={ () => console.log('Hola')}>
+        membersAso.map( ({_id, img, name, charge, links}) => (
+          <Grid item xs={12} md={6} lg={4}  key={_id} mb={3} className="" onFocus={ () => console.log('Hola')}>
             <Card sx={{ width: '80%' , display: {md:'flex', sm: 'block'}, margin: '0 auto'}}  >
               <Grid item  >
                 <CardMedia
@@ -28,23 +29,27 @@ export const Members = () => {
                   <Typography gutterBottom variant='body1' component='div'>{name}</Typography>
 
                   <Typography variant='body2'>
-                    { cargo }
+                    { charge }
                   </Typography>
 
                   
-                  <Grid item mt={12}>
-                    <IconButton>
-                      <FacebookIcon/>
-                    </IconButton>
+                  {
+                    links && (
+                      <Grid item mt={12}>
+                      <IconButton>
+                        <FacebookIcon/>
+                      </IconButton>
 
-                    <IconButton>
-                      <InstagramIcon/>
-                    </IconButton>
+                      <IconButton>
+                        <InstagramIcon/>
+                      </IconButton>
 
-                    <IconButton>
-                      <WebIcon/>
-                    </IconButton>
-                  </Grid>
+                      <IconButton>
+                        <WebIcon/>
+                      </IconButton>
+                    </Grid>
+                    )
+                  }
                 </CardContent>
               </Grid>
 
