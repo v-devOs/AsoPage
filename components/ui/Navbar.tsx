@@ -1,3 +1,7 @@
+import { useContext } from "react"
+
+import { UIContext } from "@/context"
+
 import { AppBar, Box, Toolbar, Typography, Link, Button, IconButton, SxProps, Theme } from "@mui/material"
 
 import MenuOutlined from '@mui/icons-material/MenuOutlined'
@@ -11,6 +15,8 @@ const stylesResponsive: SxProps<Theme> = {
 }
 
 export const Navbar = () => {
+
+  const { onToggleSideMenu } = useContext( UIContext )
 
   const router = useRouter()
 
@@ -40,7 +46,10 @@ export const Navbar = () => {
           }
         </Box>
 
-        <IconButton sx={{ display: { xs: 'block', sm: 'none'}}}>
+        <IconButton 
+          sx={{ display: { xs: 'block', sm: 'none'}}}
+          onClick={ () => onToggleSideMenu() }
+        >
           <MenuOutlined color="primary"/>
         </IconButton>
 
