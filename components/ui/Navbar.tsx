@@ -40,7 +40,7 @@ export const Navbar: FC<Props> = ({ useColorDark }) => {
 
     return useColorDark 
           ? '#252525'
-          : scrollInY! ? 'rgba(37,37,37, 0.8)' : 'none'
+          : scrollInY! >= 380 ? 'rgba(37,37,37, 0.8)' : 'none'
   }
 
   return (

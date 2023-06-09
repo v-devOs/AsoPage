@@ -1,2 +1,2 @@
 export * from './IProject'
-export * from './IMembers'
+export * from './IMember'

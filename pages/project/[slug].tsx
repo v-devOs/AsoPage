@@ -5,9 +5,9 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import { Grid, Typography } from '@mui/material';
 import { LandingLayout, ProjectLayout } from '@/components/layouts'
 
-import { projectsAso } from '@/components/AsoPage/basicData';
 
 import { IProject } from '../../interfaces/IProject';
+import { projectsAso } from '@/data';
 
 interface Props{
   project: IProject
@@ -19,7 +19,7 @@ const ProjectPage: FC<Props> = ({ project }) => {
   console.log(project)
   return (
     <ProjectLayout title={project.nameProject} pageDescription={project.desc}>
-      <Grid container>
+      <Grid container sx={{ height: '100vh'}}>
 
         <Grid item sm={12}>
           

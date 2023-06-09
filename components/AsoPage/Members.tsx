@@ -5,8 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import WebIcon from '@mui/icons-material/WebOutlined'
 
 import { SectionPageLayout } from "../layouts"
-import { membersAso } from "./basicData"
-import { link } from "fs"
+import { membersAso } from "@/data"
 
 export const Members = () => {
   return (

@@ -1,3 +1,4 @@
+import { IMember } from "./IMember"
 
 
 
@@ -8,4 +9,5 @@ export interface IProject{
   img: string,
   notes?: string
   slug: string
+  membersManager: IMember[]
 }

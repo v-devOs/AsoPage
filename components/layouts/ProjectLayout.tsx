@@ -25,7 +25,7 @@ export const ProjectLayout: FC<Props> = ({ children, title, pageDescription}) =>
       </nav>
       
       <main style={{
-        padding: '90px 10px'
+        padding: '90px 10px',
       }} className="fadeIn">
         { children }
       </main>

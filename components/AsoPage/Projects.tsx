@@ -1,7 +1,7 @@
 import { Grid, Typography, List, Card, CardMedia, CardContent, CardActionArea } from '@mui/material';
-import { examplesProposal, projectsAso } from './basicData';
 import { SectionPageLayout } from '../layouts';
 import { useRouter } from 'next/router';
+import { projectsAso } from '@/data';
 
 export const Projects = () => {
 
