@@ -7,4 +7,5 @@ export interface IProject{
   desc: string,
   img: string,
   notes?: string
+  slug: string
 }

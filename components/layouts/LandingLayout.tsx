@@ -8,6 +8,7 @@ import { Footer, Navbar, SideMenu } from "../ui"
 interface Props{
   children: React.ReactNode
   title: string
+  pageDescription: string
 }
 
 const stylesProperties: SxProps<Theme>   = {
@@ -16,14 +17,19 @@ const stylesProperties: SxProps<Theme>   = {
   height: '560px',
   // margin: '0 auto 100px auto',
   // boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-  backgroundImage:  'linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)), url("/images/wallpaper2-mobile.jpg")'
+  backgroundImage: { sm: 'linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)), url("/images/wallpaper2-mobile.jpg")', 
+                      md: 'linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)), url("/images/wallpaper2.jpg")'}
 }
 
-export const LandingLayout: FC<Props> = ({ children, title }) => {
+export const LandingLayout: FC<Props> = ({ children, title, pageDescription}) => {
   return (
     <>
       <Head>
         <title>{title}</title>
+        <meta name='description' content={pageDescription}/>
+
+        <meta name = 'og:title' content ={ title} />
+        <meta name = 'og:description' content={pageDescription}/>
       </Head>
       
       <Grid sx={stylesProperties}  className="container-main fadeIn">

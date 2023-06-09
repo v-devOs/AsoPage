@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { FC, useContext, useEffect, useState } from "react"
 
 import { UIContext } from "@/context"
 
@@ -9,12 +9,15 @@ import { navbarTags } from "./constants"
 import  { useRouter } from "next/router"
 
 
+interface Props {
+  useColorDark?: boolean
+}
 
 const stylesResponsive: SxProps<Theme> = {
   display: { xs: 'none', sm: 'flex'}
 }
 
-export const Navbar = () => {
+export const Navbar: FC<Props> = ({ useColorDark }) => {
 
   const { onToggleSideMenu } = useContext( UIContext )
 
@@ -33,13 +36,18 @@ export const Navbar = () => {
     }
   }, [])
 
- 
+  const selecStyle = () => {
+
+    return useColorDark 
+          ? '#252525'
+          : scrollInY! ? 'rgba(37,37,37, 0.8)' : 'none'
+  }
 
   return (
     <AppBar 
       className={`${ scrollInY! >= 380 && 'fadeIn'}`}
       sx={{padding: {sm: "10px", md: "10px 30px", lg: "10px 150px"},
-          background: `${ scrollInY! >= 380 ? 'rgba(37,37,37, 0.8)' : 'none'}`}}>
+          background: `${ selecStyle() }`}}>
       <Toolbar>
         <Link href='#main'>
           <Typography variant="h5" color='primary' >Asociacion Sc</Typography>

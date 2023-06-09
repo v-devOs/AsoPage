@@ -1,20 +1,24 @@
 import { Grid, Typography, List, Card, CardMedia, CardContent, CardActionArea } from '@mui/material';
 import { examplesProposal, projectsAso } from './basicData';
 import { SectionPageLayout } from '../layouts';
-
-
-
+import { useRouter } from 'next/router';
 
 export const Projects = () => {
+
+  const router = useRouter();
+
+  
+
   return (
     <SectionPageLayout title='Proyectos' id='Proyectos' useColorPrimary sectionClass='container-projects'>
       {
-       projectsAso.map( ({ _id, img, notes, nameProject}) => (
+       projectsAso.map( ({ _id, img, notes, nameProject, slug}) => (
           <Grid item xs={12} sm={6} lg={4} 
                 key={_id} mt={3} 
                 display='flex' 
                 justifyContent='center'
                 className='container-project'
+                onClick={ () => router.push(`/project/${slug}`)}
           >
             <Card sx={{ width: 300 , boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'}}  >
 
