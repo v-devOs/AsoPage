@@ -6,12 +6,13 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 
 export const Footer = () => {
   return (
-    <Grid container sx={{ background: '#252525', color: 'white', padding: '90px'}} spacing={10}>
+    <Grid container sx={{ background: '#252525', color: 'white', padding: { sm: '40px', md: '90px'}}} spacing={10}>
       
       <Grid item sm={12} md={6}>
-        <Typography variant="body2">Todos los derechos reservados Aso SC</Typography>
+        <Typography variant="body2" mb={2}>Todos los derechos reservados Aso SC</Typography>
         <Divider color="white"/>
-        <Typography variant="body2">El caracter de mejorar</Typography>
+
+        <Typography variant="body2" mt={2}>El caracter de mejorar</Typography>
         <Typography variant="body2">Sitio web dedicado a divulgar las propuestas, proyectos y dar conocer los integrantes de este equipo que se postula 
           para ser la Asociacion de Sistemas Computacionales y posteriormente llevar a cabo la informacion y recopilacion de datos para los eventos a realizar
         </Typography>
@@ -40,7 +41,7 @@ export const Footer = () => {
 
         <IconButton sx={{ color: "white" }}>
           <WhatsAppIcon/>
-          <Typography variant="body2">Tel: 1234567890</Typography>
+          <Typography variant="body2">1234567890</Typography>
         </IconButton>
 
       </Grid>
