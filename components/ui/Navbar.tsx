@@ -49,7 +49,7 @@ export const Navbar: FC<Props> = ({ useColorDark }) => {
       sx={{padding: {sm: "10px", md: "10px 30px", lg: "10px 150px"},
           background: `${ selecStyle() }`}}>
       <Toolbar>
-        <Link href='#main'>
+        <Link href='/'>
           <Typography variant="h5" color='primary' >Asociacion Sc</Typography>
         </Link>
 
