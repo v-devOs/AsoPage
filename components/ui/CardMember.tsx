@@ -6,20 +6,23 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import WebIcon from '@mui/icons-material/WebOutlined'
 
 import { IMember } from '@/interfaces';
+import Image from 'next/image';
 
 interface Props{
   member: IMember
 }
 
+
 export const CardMember:FC<Props> = ({ member }) => {
   return (
-    <Card sx={{ width: '80%' , display: {md:'flex', sm: 'block'}, margin: '0 auto'}}  >
+    
+    <Card sx={{ width: '80%' , display: { sm: 'flex', xs:'block'}, margin: { sm: '0', md: '0 auto'}}}  >
       <Grid item  >
         <CardMedia
           component='img'
           image={member.img}
           alt='Prouesta Asociacion SC'
-          sx={{ height: { xs: 140, md: 240}}}
+          sx={{ width: { xs: 140, md: 140}}}
         />
       </Grid>
 
@@ -52,6 +55,6 @@ export const CardMember:FC<Props> = ({ member }) => {
       </CardContent>
     </Grid>
 
-  </Card>
+    </Card>
   )
 }

@@ -14,7 +14,7 @@ export const Members = () => {
       {
         membersAso.map( (member) => (
           <Grid item xs={12} md={6} lg={4} key={member._id} mb={3} className="" onFocus={ () => console.log('Hola')}>
-            <CardMember member={member}/>
+            <CardMember member={member} />
           </Grid>
         ))
       }

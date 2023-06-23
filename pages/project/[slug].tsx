@@ -42,7 +42,7 @@ const ProjectPage: FC<Props> = ({ project }) => {
                 component='img'
                 image={project.img}
                 alt='Prouesta Asociacion SC'
-                sx={{ height: { xs: 140, md: 240}}}
+                sx={{ width: { xs: 240, md: 440}}}
               />
             </Grid>
 
@@ -56,7 +56,7 @@ const ProjectPage: FC<Props> = ({ project }) => {
                   
                   {
                     project.membersManager.map( manager => (
-                      <CardMember member={manager} key={manager._id}/>
+                      <CardMember member={manager} key={manager._id} />
                     ))
                   }
 
