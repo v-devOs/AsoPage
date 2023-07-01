@@ -11,13 +11,20 @@ import { CardMember } from "../ui"
 export const Members = () => {
   return (
     <SectionPageLayout title={"Integrantes"} id={"Integrantes"} sectionClass={""}>
-      {
-        membersAso.map( (member) => (
-          <Grid item xs={12} md={6} lg={4} key={member._id} mb={3} className="" onFocus={ () => console.log('Hola')}>
-            <CardMember member={member} />
-          </Grid>
-        ))
-      }
+      <Grid 
+        item 
+        display='flex' 
+        flexWrap='wrap' 
+        justifyContent='space-between'
+        gap={10}
+      >
+
+        {
+          membersAso.map( (member) => (
+            <CardMember member={member} key={member._id} />
+          ))
+        }
+      </Grid>
 
     </SectionPageLayout>
   )
