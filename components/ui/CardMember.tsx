@@ -1,5 +1,5 @@
 import { CSSProperties, FC } from 'react';
-import { Card, Grid, CardMedia, CardContent, Typography, IconButton, Box } from '@mui/material';
+import {  Grid, CardMedia, CardContent, Typography, IconButton, Box, Card } from '@mui/material';
 
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
@@ -13,30 +13,31 @@ interface Props{
 }
 
 const styleContainerCard: CSSProperties = {
-  background: 'blue',
-  padding: 50,
-  borderRadius: '100%'
+  // background: '#252525',
+  border: '1px solid #252525',
+  width: '250px'
+  // textAlign: 'center'
+  // borderRadius: '100%'
 }
 
 
 export const CardMember:FC<Props> = ({ member }) => {
   return (
-    
-    <div >
-      <div style={styleContainerCard}>
-        <Image
-          width={200}
-          height={200}
-          src={member.img}
-          alt="Imagen de miembro de Aso"
-        />
-      </div>
+    <Card sx={{}}>
+      <CardMedia
+        component='img'
+        height={240}
+        image={'/images/me.png'}
+        alt='Prouesta Asociacion SC'
+      />
 
-      <Box sx={{ textAlign: 'center'}}>
-        <Typography variant='body1'>{ member.name }</Typography>
+      <CardContent>
+        <Typography variant='h6'>{member.name}</Typography>
+
         <Typography variant='body1'>{ member.charge }</Typography>
-      </Box>
-    </div>
+      </CardContent>
+      
+    </Card>
     
   )
 }

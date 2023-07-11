@@ -15,7 +15,7 @@ export const Members = () => {
         item 
         display='flex' 
         flexWrap='wrap' 
-        justifyContent='space-between'
+        justifyContent='space-evenly'
         gap={10}
       >
 
