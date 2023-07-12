@@ -26,8 +26,9 @@ export const CardMember:FC<Props> = ({ member }) => {
 
       <CardContent sx={{ p: '10px 0'}}>
         <Typography variant='h6'>{member.name}</Typography>
-
         <Typography variant='body1'>{ member.charge }</Typography>
+
+        
       </CardContent>
       
     </Card>
