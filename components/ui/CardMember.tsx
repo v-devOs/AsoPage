@@ -12,26 +12,19 @@ interface Props{
   member: IMember
 }
 
-const styleContainerCard: CSSProperties = {
-  // background: '#252525',
-  border: '1px solid #252525',
-  width: '250px'
-  // textAlign: 'center'
-  // borderRadius: '100%'
-}
-
 
 export const CardMember:FC<Props> = ({ member }) => {
   return (
-    <Card sx={{}}>
+    <Card sx={{ width: '250px', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', p: 2 }}>
       <CardMedia
         component='img'
         height={240}
         image={'/images/me.png'}
         alt='Prouesta Asociacion SC'
+        sx={{ borderRadius: '5px'}}
       />
 
-      <CardContent>
+      <CardContent sx={{ p: '10px 0'}}>
         <Typography variant='h6'>{member.name}</Typography>
 
         <Typography variant='body1'>{ member.charge }</Typography>
