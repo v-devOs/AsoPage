@@ -18,7 +18,7 @@ export const Proposals = () => {
         {
           proposalsAso.map( ({ _id, desc, nameProposal}) => (
             <Grid item xs={12} key={_id} mb={3}>
-                <CardContent sx={{ height: '300px'}}>
+                <CardContent sx={{ height: {xs:'maxcontent', lg: '300px'}}}>
                   <Typography variant='h5' component='h5'>{ nameProposal }</Typography>
                   <Divider sx={{ m: '5px 0'}}/>
                   <Typography variant='body1' component='h5'>{ desc }</Typography>
