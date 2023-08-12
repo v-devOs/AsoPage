@@ -1,7 +1,7 @@
 import { HomeLayout } from '@/components/layouts/HomeLayout';
 import { Typography } from '@mui/material'
 import { useWrite } from '../hook/useWrite';
-import { Proposals } from '@/components/lading';
+import { Projects, Proposals } from '@/components/lading';
 
 const HomePage = () => {
 
@@ -19,6 +19,10 @@ const HomePage = () => {
 
       <section className='section-proposals spacing-sections'>
         <Proposals/>
+      </section>
+
+      <section className='section-projects spacing-sections'>
+        <Projects/>
       </section>
 
 
