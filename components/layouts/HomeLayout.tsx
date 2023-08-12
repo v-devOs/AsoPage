@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React from 'react'
 import { ReactNode, FC } from 'react';
+import { Footer } from '../ui';
 
 
 interface Props{
@@ -17,11 +18,15 @@ export const HomeLayout: FC<Props> = ({ children, desc, title}) => {
         <title>{ title }</title>
       </Head>
 
-      <main style={{ margin: '70px 0px 0px'}} className='fade-in'>
+      <main  className='fade-in'>
         {
           children
         }
       </main>
+
+      <footer>
+        <Footer/>
+      </footer>
     </>
   )
 }

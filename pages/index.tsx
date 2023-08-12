@@ -27,6 +27,9 @@ const HomePage = () => {
       <section className='section-projects spacing-sections appearWhenScroll'>
         <Members/>
       </section>
+      <section className='section-projects spacing-sections appearWhenScroll'>
+        {/* TODO: Crear componente para registro a eventos */}
+      </section>
 
 
     </HomeLayout>

@@ -6,7 +6,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 
 export const Footer = () => {
   return (
-    <Grid container sx={{ background: '#252525', color: 'white', padding: { sm: '40px', md: '90px'}}} spacing={10}>
+    <Grid container sx={{ background: '#151515', color: 'white', p: 2, pt: 10 }} spacing={4}>
       
       <Grid item sm={12} md={6}>
         <Typography variant="body2" mb={2}>Todos los derechos reservados Aso SC</Typography>

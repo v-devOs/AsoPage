@@ -14,7 +14,7 @@
   animation-timeline: --text;
   animation-name: appear;
 
-  animation-range: entry 5% cover 10%;
+  animation-range: entry 25% cover 30%;
   animation-fill-mode: both;
 }
 
