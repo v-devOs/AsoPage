@@ -17,11 +17,11 @@ const HomePage = () => {
         <Typography variant='h1' component='h1' color='white' sx={{ textAlign: 'center'}}>{ actualPhrase }</Typography>
       </section>
 
-      <section className='section-proposals spacing-sections'>
+      <section className='section-proposals spacing-sections appearWhenScroll'>
         <Proposals/>
       </section>
 
-      <section className='section-projects spacing-sections'>
+      <section className='section-projects spacing-sections '>
         <Projects/>
       </section>
 

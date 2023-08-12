@@ -28,10 +28,11 @@ export const Projects = () => {
       <Grid item xs={12} md={6}>
           {
             projectsAso.map( ({ _id, desc, nameProject, membersManager }) => (
-              <Button 
+              <Button
+                className='' 
                 key={ _id} 
                 fullWidth
-                sx={{ mb: 1, background: '#E7e7e7', color: '#101010', display: 'flex', flexWrap: 'wrap', alignItems: 'center'}}
+                sx={{ mb: 1, background: '#E7e7e7', color: '#101010', display: 'flex', flexWrap: 'wrap'}}
                 variant='contained'
                 onClick={ () => onClick( nameProject )}
               >
