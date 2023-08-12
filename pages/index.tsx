@@ -1,7 +1,7 @@
 import { HomeLayout } from '@/components/layouts/HomeLayout';
 import { Typography } from '@mui/material'
 import { useWrite } from '../hook/useWrite';
-import { Projects, Proposals } from '@/components/lading';
+import { Members, Projects, Proposals } from '@/components/lading';
 
 const HomePage = () => {
 
@@ -21,8 +21,11 @@ const HomePage = () => {
         <Proposals/>
       </section>
 
-      <section className='section-projects spacing-sections '>
+      <section className='section-projects spacing-sections appearWhenScroll'>
         <Projects/>
+      </section>
+      <section className='section-projects spacing-sections appearWhenScroll'>
+        <Members/>
       </section>
 
 

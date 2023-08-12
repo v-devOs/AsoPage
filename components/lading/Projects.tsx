@@ -16,10 +16,10 @@ export const Projects = () => {
   }
 
   return (
-    <Grid container spacing={4} sx={{ p: 2}}>
+    <Grid container spacing={4} sx={{ p: 2, mb: 4}}>
 
       <Grid item xs={12} md={6}>
-        <DecoredTitle title='Projectos' useColorAlternative>
+        <DecoredTitle title='Nuestros projectos' useColorAlternative>
           <Typography variant='body1'>
             Cupidatat aute veniam magna sunt adipisicing tempor. Excepteur occaecat voluptate consequat qui sit incididunt tempor incididunt consectetur dolor deserunt. Esse ipsum nisi amet minim sunt minim fugiat.
           </Typography>
