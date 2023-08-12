@@ -31,24 +31,30 @@ export const lightTheme = createTheme({
         root: {
           background: 'none',
           height: 70,
-
         },
       }
     },
     MuiTypography: {
       styleOverrides: {
         h1: {
-          fontSize: 35,
-          fontWeight: 700
+          fontSize: 55,
         },
         h2: {
-          fontSize: 30,
-          fontWeight: 400
+          fontSize: 45,
         },
-        subtitle1: {
-          fontSize: 10,
-          fontWeight: 600
+        h3: {
+          fontSize: 35
+        },
+        body1: {
+          fontSize: 20
+        },
+        body2: {
+          fontSize: 18
         }
+        
+      },
+      defaultProps: {
+        mb: 2
       }
     },
 
@@ -74,8 +80,6 @@ export const lightTheme = createTheme({
         }
       }
     },
-
-
     MuiCard: {
       defaultProps: {
         elevation: 0
@@ -86,7 +90,7 @@ export const lightTheme = createTheme({
           borderRadius: '10px',
         }
       }
-    }
+    },
     
   }
 });

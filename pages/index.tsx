@@ -1,18 +1,28 @@
-import { Grid, Typography } from '@mui/material'
-import { LandingLayout } from '@/components/layouts'
+import { HomeLayout } from '@/components/layouts/HomeLayout';
+import { Typography } from '@mui/material'
 import { useWrite } from '../hook/useWrite';
+import { Proposals } from '@/components/lading';
 
 const HomePage = () => {
 
   const {actualPhrase} = useWrite('Nombre Asociacion')
 
   return (
-    <LandingLayout title='Asociacion Estudiantil | Inicio' pageDescription='Pagina web del grupo candidato a la asociacion estudiantil'>
-        <Grid>
-          <Typography variant='h1' color='primary' component='h1' sx={{ width: 'maxContent', padding: { sm: '0 60px'}}} mt={15}>{actualPhrase}</Typography>
+    <HomeLayout 
+      title='Aso page' 
+      desc='Descripcion pagina'
+    >
 
-        </Grid>
-    </LandingLayout>
+      <section className='section-main spacing-sections'>
+        <Typography variant='h1' component='h1' color='white' sx={{ textAlign: 'center'}}>{ actualPhrase }</Typography>
+      </section>
+
+      <section className='section-proposals spacing-sections'>
+        <Proposals/>
+      </section>
+
+
+    </HomeLayout>
   )
 }
 
