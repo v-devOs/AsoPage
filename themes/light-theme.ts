@@ -19,18 +19,16 @@ export const lightTheme = createTheme({
     MuiLink: {
       defaultProps: {
         underline: 'none',
-        color: '#252525'
+        color: '#fff'
       },
     },
     MuiAppBar: {
       defaultProps: {
         elevation: 0,
-        position: 'fixed',
       },
       styleOverrides: {
         root: {
-          background: 'none',
-          height: 70,
+          // height: 70,
         },
       }
     },

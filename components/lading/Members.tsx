@@ -12,7 +12,7 @@ export const Members = () => {
         </DecoredTitle>
       </Grid>
 
-      <Grid item xs={12} sx={{ display: { xs: 'none', md: 'flex'}, flexWrap: 'wrap', justifyContent: 'space-evenly'}}>
+      <Grid item xs={12} sx={{ display: { xs: 'none', md: 'flex'}, flexWrap: 'wrap', justifyContent: 'space-between'}}>
         <Gallery/>
       </Grid>
 

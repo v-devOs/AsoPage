@@ -2,6 +2,7 @@ import { HomeLayout } from '@/components/layouts/HomeLayout';
 import { Typography } from '@mui/material'
 import { useWrite } from '../hook/useWrite';
 import { Members, Projects, Proposals } from '@/components/lading';
+import Image from 'next/image';
 
 const HomePage = () => {
 
@@ -14,7 +15,8 @@ const HomePage = () => {
     >
 
       <section className='section-main spacing-sections'>
-        <Typography variant='h1' component='h1' color='white' sx={{ textAlign: 'center'}}>{ actualPhrase }</Typography>
+        <Typography variant='h1' component='h1' color='white' sx={{ textAlign: 'center', pt: 15}}>{ actualPhrase }</Typography>
+    
       </section>
 
       <section className='section-proposals spacing-sections appearWhenScroll'>
