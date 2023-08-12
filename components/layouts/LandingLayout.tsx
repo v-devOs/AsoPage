@@ -31,27 +31,20 @@ export const LandingLayout: FC<Props> = ({ children, title, pageDescription}) =>
         <meta name = 'og:description' content={pageDescription}/>
       </Head>
       
-      <Grid sx={stylesProperties}  className="container-main fadeIn">
         <nav>
           <Navbar/>
         </nav>
-
+        
         <SideMenu/>
 
         <main style={{
           padding: '90px 10px'
         }}>
-          { children }
+          <Grid container>
+            { children }
+          </Grid>
+          
         </main>
-
-
-        <footer>
-          <Footer/>
-        </footer>
-
-      </Grid>
-      
-
     </>
   )
 }
