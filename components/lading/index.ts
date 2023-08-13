@@ -1,3 +1,5 @@
 export * from './Members'
 export * from './Projects'
 export * from './Proposals'
+export * from './HomeView'
+export * from './ui'

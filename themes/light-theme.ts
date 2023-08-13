@@ -28,7 +28,7 @@ export const lightTheme = createTheme({
       },
       styleOverrides: {
         root: {
-          // height: 70,
+          height: 70,
         },
       }
     },
@@ -51,9 +51,9 @@ export const lightTheme = createTheme({
         }
         
       },
-      defaultProps: {
-        mb: 2
-      }
+      // defaultProps: {
+      //   mb: 2
+      // }
     },
 
     MuiButton: {

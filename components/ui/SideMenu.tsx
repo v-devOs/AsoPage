@@ -15,14 +15,11 @@ export const SideMenu = () => {
   return (
     <Drawer
       open={ isSideMenuOpen }
-      anchor='right'
+      anchor='bottom'
       onClose={ () => onToggleSideMenu() }
       sx={{ backdropFilter: 'blur(4px)', transition: 'all 0.5s ease-out'}}
     >
       <Box sx={{ width: 250, paddingTop: 5}}>
-
-        
-
         <List>
 
           <ListItem>
@@ -35,9 +32,10 @@ export const SideMenu = () => {
               <ListItem 
                 key={tag}
                 onClick={ () => onToggleSideMenu() }
+                
               >
 
-                <Link href={`#${tag}`}>
+                <Link href={`#${tag}`} sx={{ color: '#101010'}}>
                   { tag }
                 </Link>
 

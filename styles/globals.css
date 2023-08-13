@@ -4,14 +4,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.section-main {
-  height: 100vh;
-  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("/images/wallpaper2.jpg");
-  background-repeat: no-repeat;
-  padding: 100px 0px;
-  /* background: #191919; */
-
-}
 
 
 .circular-btn {
@@ -20,4 +12,11 @@
 
 .circular-btn:hover {
   background-color: #274494;
+}
+
+@media screen and (max-width: 576px ) {
+  .img-about-we{
+    width: auto;
+    
+  }
 }

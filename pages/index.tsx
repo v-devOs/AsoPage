@@ -2,7 +2,7 @@ import { HomeLayout } from '@/components/layouts/HomeLayout';
 import { Typography } from '@mui/material'
 import { useWrite } from '../hook/useWrite';
 import { Members, Projects, Proposals } from '@/components/lading';
-import Spline from '@splinetool/react-spline';
+import { HomeView } from '@/components/lading/HomeView';
 
 
 const HomePage = () => {
@@ -14,15 +14,13 @@ const HomePage = () => {
       title='Asociación de Sistemas Computacionales'
       desc='Descripcion pagina'
     >
+      
+      <section>
 
-      {/* <section className='section-main spacing-sections'>
-        <Typography variant='h1' component='h1' color='white' sx={{ textAlign: 'center', pt: 15 }}>{actualPhrase}</Typography>
-
-      </section> */}
-
-      <Spline scene="https://prod.spline.design/XKb812Ttt1vhCFx7/scene.splinecode" style={{ height: '100vh', backgroundColor: 'black' }} />
-
-      <section className='section-proposals spacing-sections appearWhenScroll'>
+        <HomeView/>
+      </section>
+      
+      <section className='section-proposals spacing-sections'>
         <Proposals />
       </section>
 
