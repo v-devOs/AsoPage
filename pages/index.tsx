@@ -19,8 +19,12 @@ const HomePage = () => {
         <Typography variant='h1' component='h1' color='white' sx={{ textAlign: 'center', pt: 15 }}>{actualPhrase}</Typography>
 
       </section> */}
+      <div style={{ display: 'none' }}>
+        <h1>Asociación de Sistemas Computacionales</h1>
+        <h2>Instituto Tecnológico de Celaya ITC</h2>
+      </div>
 
-      <Spline scene="https://prod.spline.design/XKb812Ttt1vhCFx7/scene.splinecode" style={{ height: '100vh', backgroundColor: 'black' }} />
+      <Spline scene="https://prod.spline.design/XKb812Ttt1vhCFx7/scene.splinecode" style={{ height: '80vh', backgroundColor: 'black' }} />
 
       <section className='section-proposals spacing-sections appearWhenScroll'>
         <Proposals />

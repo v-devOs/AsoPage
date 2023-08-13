@@ -1,49 +1,31 @@
 import React from 'react'
-import { Card, CardContent, Divider, Grid, Typography } from '@mui/material'
-import { DecoredTitle } from '../ui'
 import { proposalsAso } from '../../data/proposalsAso';
+import Spline from '@splinetool/react-spline';
+import Image from 'next/image';
 
 export const Proposals = () => {
   return (
-    <Grid container sx={{ background: '#101010', p: 2 }} spacing={4}>
-
-      <Grid item xs={12} md={6} sx={{ color: 'white', display: { xs: 'block', md: 'none' } }}>
-        <DecoredTitle title='Propuestas'>
-          <Typography variant='body1'>
-            Elit sunt deserunt duis esse tempor ea. Consequat ullamco elit esse ut exercitation sit ullamco ea non deserunt aliqua dolore aliquip dolore. Ut velit Lorem enim laboris velit cupidatat tempor. Sint culpa officia culpa eu commodo magna anim aute. Sunt fugiat reprehenderit labore veniam ad est est enim. Id aliqua consectetur officia nisi commodo laboris quis tempor incididunt reprehenderit pariatur amet ullamco ad.
-          </Typography>
-        </DecoredTitle>
-      </Grid>
-
-
-      <Grid item xs={12} md={6}>
-        <Grid container spacing={2}>
-
-          {
-            proposalsAso.map(p => (
-              <Grid item xs={12} md={6} key={p._id}>
-                <Card className='appearAndIncrementWidth'>
-                  <CardContent>
-                    <Typography variant='body1'>{p.nameProposal}</Typography>
-                    <Divider />
-                    <Typography variant='body2'>{p.desc}</Typography>
-                  </CardContent>
-
-                </Card>
-              </Grid>
-            ))
-          }
-
-        </Grid>
-      </Grid>
-
-      <Grid item xs={12} md={6} sx={{ color: 'white', display: { xs: 'none', md: 'block' } }}>
-        <DecoredTitle title='Propuestas'>
-          <Typography variant='body1'>
-            Elit sunt deserunt duis esse tempor ea. Consequat ullamco elit esse ut exercitation sit ullamco ea non deserunt aliqua dolore aliquip dolore. Ut velit Lorem enim laboris velit cupidatat tempor. Sint culpa officia culpa eu commodo magna anim aute. Sunt fugiat reprehenderit labore veniam ad est est enim. Id aliqua consectetur officia nisi commodo laboris quis tempor incididunt reprehenderit pariatur amet ullamco ad.
-          </Typography>
-        </DecoredTitle>
-      </Grid>
-    </Grid>
+    <section className='bg-black white-text ph-40'>
+      <div className='grid-c-2 '>
+        <div>
+          <h3>Impulsando la Innovación en la Era Digital</h3>
+          <h2 className='f-size-50'>Nuestras propuestas</h2>
+          <hr style={{ width: '30%' }} className='mb-10' />
+          <p className='f-size-18 justify-text'>Nos enorgullece presentar un conjunto de propuestas que reflejan nuestro compromiso con la excelencia académica, la colaboración y el avance tecnológico. Nuestro objetivo es enriquecer la experiencia de cada miembro mientras fomentamos un ambiente que nutre el aprendizaje y la innovación en la era digital. </p>
+        </div>
+        <Spline scene="https://prod.spline.design/yIZkHvwJm5KNXI9g/scene.splinecode" />
+      </div>
+      <div className='grid-c-4 gap-15 mt-10'>
+        {
+          proposalsAso.map(p => (
+            <div className='bg-white shadow radius black-text p-20'>
+              <Image src='' alt={p.nameProposal} width={300} height={300} className='max-witdh' />
+              <h5 className='center-text f-size-24'>{p.nameProposal}</h5>
+              <p className='f-size-18'>{p.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
   )
 }
