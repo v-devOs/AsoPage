@@ -18,9 +18,9 @@ export const HomeLayout: FC<Props> = ({ children, desc, title}) => {
         <title>{ title }</title>
       </Head>
 
-      <nav>
+      {/* <nav>
         <Navbar/>
-      </nav>
+      </nav> */}
 
       <main  className='fade-in'>
         {

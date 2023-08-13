@@ -2,32 +2,35 @@ import { HomeLayout } from '@/components/layouts/HomeLayout';
 import { Typography } from '@mui/material'
 import { useWrite } from '../hook/useWrite';
 import { Members, Projects, Proposals } from '@/components/lading';
-import Image from 'next/image';
+import Spline from '@splinetool/react-spline';
+
 
 const HomePage = () => {
 
-  const {actualPhrase} = useWrite('Nombre Asociacion')
+  const { actualPhrase } = useWrite('Nombre Asociacion')
 
   return (
-    <HomeLayout 
-      title='Aso page' 
+    <HomeLayout
+      title='Asociación de Sistemas Computacionales'
       desc='Descripcion pagina'
     >
 
-      <section className='section-main spacing-sections'>
-        <Typography variant='h1' component='h1' color='white' sx={{ textAlign: 'center', pt: 15}}>{ actualPhrase }</Typography>
-    
-      </section>
+      {/* <section className='section-main spacing-sections'>
+        <Typography variant='h1' component='h1' color='white' sx={{ textAlign: 'center', pt: 15 }}>{actualPhrase}</Typography>
+
+      </section> */}
+
+      <Spline scene="https://prod.spline.design/XKb812Ttt1vhCFx7/scene.splinecode" style={{ height: '100vh', backgroundColor: 'black' }} />
 
       <section className='section-proposals spacing-sections appearWhenScroll'>
-        <Proposals/>
+        <Proposals />
       </section>
 
       <section className='section-projects spacing-sections appearWhenScroll'>
-        <Projects/>
+        <Projects />
       </section>
       <section className='section-projects spacing-sections appearWhenScroll'>
-        <Members/>
+        <Members />
       </section>
       <section className='section-projects spacing-sections appearWhenScroll'>
         {/* TODO: Crear componente para registro a eventos */}
